@@ -30,3 +30,14 @@
 **Alternatives Considered:** Volta reinstall (could be done later to restore managed version)
 **Impact:** `node` available at v24.14.0. OpenClaw gateway starts successfully. All npm-based tools unblocked.
 ---
+
+
+---
+## 2026-03-20 — Tier 1 Productivity MCP Servers Mounted (Google, YouTube, MS365)
+**Tool:** BabyClaw (OpenClaw/Discord)
+**Context:** VTS Productivity Apps Integration Plan called for mounting Google Workspace, YouTube, MS365, and Home Assistant as Tier 1 MCP servers.
+**Decision:** BabyClaw and BALLER mounted Google Workspace, YouTube, and Microsoft 365 MCP servers into VTS while Claude Desktop was running the folder cleanup.
+**Rationale:** Highest-impact productivity integrations for daily driver apps.
+**Alternatives Considered:** N/A — these were already planned.
+**Impact:** VTS now has ~130+ additional productivity tools. Home Assistant remains pending.
+---
