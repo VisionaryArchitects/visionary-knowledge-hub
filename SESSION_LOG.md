@@ -40,3 +40,27 @@
 **Open Questions:**
 - None currently
 ---
+
+
+---
+## 2026-03-20 05:30 — Claude Desktop (Dispatch/Cowork)
+**Summary:** Deep clean of D:\DEV_PROJECTS and D:\Obsidian_Vault. Archived dead folders, retired AI tool configs, orphaned experiments. Nuked regenerable caches. ~4.4 GB recovered.
+**Decisions:**
+- Archive-first policy enforced: everything moved to `_archive_2026-03-20/` folders, nothing hard-deleted
+- Caches (tmp, .refact, .vs, .ruff_cache, htmlcov) nuked directly — all regenerable
+- Obsidian plugin data (.smart-env 338MB, .lancedb 163MB) nuked — stale since February, regenerable
+- Retired AI tool configs (Kimi, Grok, Qwen, Sii, Trae, Ralphy) archived
+**State Changes:**
+- DEV_PROJECTS: 30+ folders archived or nuked
+- Obsidian: 14 empty/stale/duplicate folders archived, 500MB plugin caches nuked
+- Archives at: `D:\DEV_PROJECTS\_archive_2026-03-20\` and `D:\Obsidian_Vault\_archive_2026-03-20\`
+**Next Steps:**
+- Review `Visionary_Backups/` (11.8 GB) — oldest backups are Feb 2026, could move to external storage
+- Review `Visionary_Agents/` (2.3 GB, 19 experiment folders) — audit which are still active
+- Consider cleaning `node_modules/` in DEV_PROJECTS root and dead GitHub repos
+- Deploy OpenMemory MCP (Layer 2 of knowledge sync)
+**Open Questions:**
+- Should `Visionary_Backups/` move to cloud/external? 11.8 GB is significant
+- Should the `Prompts/` folder in Obsidian be consolidated into `11-Master-Docs/`?
+- What about the 150+ GitHub repos — many are likely abandoned experiments
+---
