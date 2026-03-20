@@ -14,7 +14,7 @@
 - **OpenClaw**: v2026.3.13, gateway on port 18789, 4 agents (BabyClaw, Forge, Watchtower, DeepScholar)
 - **Ollama**: v0.15.6, port 11434, 18 models, RTX 4090 **16 GB VRAM** (NOT 24 GB)
 - **ngrok**: Hobby tier, `.ngrok.app` domains (NEVER `.ngrok.io`)
-- **Node**: v24.14.0 (winget-installed, NOT Volta currently)
+- **Node**: v25.6.1 (Volta-managed)
 - **Python**: 3.14.2
 - **Runtime mode**: LOCAL host-first (not Docker)
 

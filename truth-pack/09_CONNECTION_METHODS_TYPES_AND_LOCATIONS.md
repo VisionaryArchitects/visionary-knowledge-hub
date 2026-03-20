@@ -62,7 +62,7 @@ stack. Use it when another AI needs to know:
 | VTS entry point (SSE) | `D:\DEV_PROJECTS\GitHub\Claude_Opus_ChatGPT_App_Project\main.py` |
 | VTS Claude Desktop entry point (STDIO) | `D:\DEV_PROJECTS\GitHub\Claude_Opus_ChatGPT_App_Project\main_stdio.py` |
 | Codex global config | `C:\Users\jerem\.codex\config.toml` |
-| Codex project MCP config | `D:\DEV_PROJECTS\.codex\mcp-config.json` |
+| Codex project MCP config | `D:\DEV_PROJECTS\.mcp.json` |
 | Claude Desktop config | `C:\Users\jerem\AppData\Roaming\Claude\claude_desktop_config.json` |
 | Copilot MCP config | `C:\Users\jerem\.copilot\mcp-config.json` |
 | Gemini settings | `C:\Users\jerem\.gemini\settings.json` |
@@ -110,7 +110,7 @@ curl http://localhost:11434/api/tags
 curl http://localhost:4040/api/tunnels
 
 Get-Content C:\Users\jerem\.codex\config.toml
-Get-Content D:\DEV_PROJECTS\.codex\mcp-config.json
+Get-Content D:\DEV_PROJECTS\.mcp.json
 Get-Content C:\Users\jerem\.copilot\mcp-config.json
 Get-Content C:\Users\jerem\.gemini\settings.json
 Get-Content C:\Users\jerem\.config\opencode\opencode.json

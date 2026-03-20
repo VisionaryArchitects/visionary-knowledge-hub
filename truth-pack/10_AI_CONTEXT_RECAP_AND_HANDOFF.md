@@ -125,7 +125,7 @@ curl -I http://localhost:8082/sse
 curl http://127.0.0.1:18789/health
 curl http://localhost:11434/api/tags
 curl http://localhost:4040/api/tunnels
-Get-Content D:\DEV_PROJECTS\.codex\mcp-config.json
+Get-Content D:\DEV_PROJECTS\.mcp.json
 Get-Content C:\Users\jerem\.codex\config.toml
 Get-Content C:\Users\jerem\.openclaw\openclaw.json
 Get-Content C:\Users\jerem\.mcporter\mcporter.json

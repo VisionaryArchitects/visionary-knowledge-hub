@@ -64,3 +64,28 @@
 - Should the `Prompts/` folder in Obsidian be consolidated into `11-Master-Docs/`?
 - What about the 150+ GitHub repos — many are likely abandoned experiments
 ---
+
+
+---
+## 2026-03-20 06:00 — Claude Desktop (Dispatch/Cowork)
+**Summary:** Deep clean round 2. Archived remaining stragglers, plugin folders, Prompts/ overlap, Visionary_Backups (11.8GB), Visionary_Agents (2.3GB). Nuked root node_modules. Both folders are now clean.
+**Decisions:**
+- Prompts/ (455 files) archived — 11-Master-Docs/ is the canonical truth location
+- Visionary_Backups (11.8 GB) archived — Feb 2026 backups no longer needed in active workspace
+- Visionary_Agents (2.3 GB, 19 experiment folders) archived — mostly abandoned experiments
+- All Obsidian plugin-generated folders archived (GitHub, GitHub PRs, BMO, gemini-scribe, n8n-skills, etc.)
+- root node_modules nuked
+**State Changes:**
+- D:\DEV_PROJECTS now has 16 active folders (down from 60+)
+- D:\Obsidian_Vault now has 10 active folders (down from 40+)
+- Archives at _archive_2026-03-20/ in both locations (recoverable)
+- Estimated total space recovered: ~18+ GB
+**Final Clean Folder State:**
+- DEV_PROJECTS: .claude, .codex, .copilot, .gemini, .git, .github, .learnings, .openclaw, artifacts, GitHub, mem0, scripts, skills, visionary-ai-bridge, Visionary_Projects, Visionary_Skills
+- Obsidian_Vault: 00-Dashboard, 03-OpenClaw, 05-Channels, 09-Sessions, 09-Skills, 10-Projects, 11-Master-Docs, 12-Operations, 16-Archive, 17-BALLER
+**Next Steps:**
+- Deploy OpenMemory MCP (Layer 2 shared brain)
+- Apply BabyClaw 7-change config fix
+- Mount Tier 1 productivity MCP servers (Google, HA, YouTube, MS365)
+- Consider compressing _archive folders to zip and moving to external storage
+---

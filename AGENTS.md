@@ -14,7 +14,7 @@
 - **OpenClaw**: v2026.3.13, gateway on port 18789, 4 agents (BabyClaw, Forge, Watchtower, DeepScholar)
 - **Ollama**: v0.15.6, port 11434, 18 models, RTX 4090 **16 GB VRAM** (NOT 24 GB)
 - **ngrok**: Hobby tier, `.ngrok.app` domains (NEVER `.ngrok.io`)
-- **Node**: v24.14.0
+- **Node**: v25.6.1
 - **Python**: 3.14.2
 - **Runtime mode**: LOCAL host-first (not Docker)
 
@@ -29,7 +29,7 @@
 
 Codex CLI connects via `mcp-remote` bridge to SSE: `http://localhost:8082/sse`
 - Global config: `C:\Users\jerem\.codex\config.toml` (runtime model: gpt-5.4)
-- Project MCP config: `D:\DEV_PROJECTS\.codex\mcp-config.json`
+- Project MCP config: `D:\DEV_PROJECTS\.mcp.json`
 - Also mounts: `minimax-mcp` and `minimax-coding-plan-mcp` via stdio
 
 ## Core Rules
