@@ -1,0 +1,32 @@
+# DECISIONS LOG — Visionary Architects
+# APPEND-ONLY. Never delete or reorganize entries. Newest at bottom.
+
+---
+## 2026-03-20 — GitHub Repo as Canonical Source of Truth (Not Obsidian)
+**Tool:** Claude Desktop (Dispatch/Cowork)
+**Context:** Plans, decisions, and session context kept evaporating across 8+ AI tools. Obsidian plugins were auto-moving files. No single source of truth persisted reliably.
+**Decision:** Create `visionary-knowledge-hub` GitHub repo as the single canonical source of truth for all AI tools.
+**Rationale:** Every CLI tool already operates in git repos. Git provides version control, accessibility from every tool, and protection against accidental deletion. Obsidian becomes a read/write interface via sync, not the source.
+**Alternatives Considered:** Obsidian vault (rejected — plugins auto-move files, local-only, half the tools can't write to it), Notion (rejected — external dependency, latency), local folder with no VCS (rejected — no history, no protection)
+**Impact:** All context files (CLAUDE.md, AGENTS.md, GEMINI.md, copilot-instructions.md, SOUL.md) are generated from this repo. All session handoffs, decisions, and plans are logged here.
+---
+
+---
+## 2026-03-19 — Local Host-First Mode (No Docker for OpenClaw)
+**Tool:** Claude Desktop (Dispatch/Cowork)
+**Context:** Docker mode for OpenClaw caused day-long debugging session that drained operator energy. Port conflicts, PATH issues, and config drift.
+**Decision:** Run OpenClaw in local host-native mode, not Docker.
+**Rationale:** Docker adds complexity without proportional benefit for a single-operator stack. Host-native is simpler, faster to debug, and already validated.
+**Alternatives Considered:** Docker (rejected — too much friction for solo operator with ADHD)
+**Impact:** Boot order uses `openclaw gateway start` directly. Docker compose files remain available as alternative but are not the default.
+---
+
+---
+## 2026-03-19 — Node.js Reinstalled via winget (v24.14.0)
+**Tool:** Claude Desktop (Dispatch/Cowork)
+**Context:** Node.js was completely missing from PATH after Docker back-and-forth. OpenClaw gateway couldn't start.
+**Decision:** Install Node.js LTS via `winget install OpenJS.NodeJS.LTS`. Note: truth pack says Volta-managed v25.6.1 — this needs reconciliation.
+**Rationale:** Fastest path to unblock OpenClaw and all npm-based MCP servers.
+**Alternatives Considered:** Volta reinstall (could be done later to restore managed version)
+**Impact:** `node` available at v24.14.0. OpenClaw gateway starts successfully. All npm-based tools unblocked.
+---
