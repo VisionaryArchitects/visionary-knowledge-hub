@@ -89,3 +89,27 @@
 - Mount Tier 1 productivity MCP servers (Google, HA, YouTube, MS365)
 - Consider compressing _archive folders to zip and moving to external storage
 ---
+
+
+---
+## 2026-03-20 13:15 — Claude Desktop (Dispatch/Cowork)
+**Summary:** Deployed OpenMemory natively (not Docker). Debugged user registration, Qdrant collection dimensions, and LLM timeout issues. Write/read confirmed working with 5 test memories.
+**Decisions:**
+- OpenMemory runs natively using C:\Python314\python.exe, NOT in Docker
+- Qdrant stays in Docker (lightweight 50MB vector store container)
+- Use `infer: false` for all memory writes — AI tools write clean formatted text directly, skip slow LLM re-extraction
+- User ID is `default_user` (Windows doesn't set USER env var like Linux)
+- qwen3-embedding:0.6b produces 1024-dim vectors (not 1536 like OpenAI) — collection created with correct dimensions
+**State Changes:**
+- OpenMemory API live at http://localhost:8765
+- Qdrant live at http://localhost:6333 (collection: visionary_memory, 1024 dims)
+- 5 test memories stored and retrievable
+- unified-memory-bridge skill written and pushed to knowledge hub
+- VTS restarted on core profile after python process kill
+**Next Steps:**
+- Wire OpenMemory MCP into each CLI tool's config
+- Update unified-memory-bridge skill with infer:false default and correct user_id
+- Add OpenMemory to startup script
+- Activate MiniMax tools and SuperPowers (BALLER requested)
+- Test end-to-end cross-tool memory flow
+---
