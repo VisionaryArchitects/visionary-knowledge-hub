@@ -150,3 +150,27 @@
 **Open Questions:**
 - Whether BALLER wants to override the host-package rule for the WinUI bootstrap path
 ---
+
+
+---
+## 2026-03-20 21:35 — Claude Desktop (Dispatch/Cowork)
+**Summary:** Completed full OpenMemory wiring into every CLI tool. All 6 AI tools now have OpenMemory MCP configured. Startup script updated to auto-start OpenMemory. Survived Windows Update forced restart — full stack recovered.
+**Decisions:**
+- OpenMemory MCP SSE endpoint pattern: `http://localhost:8765/mcp/{client-name}/sse/default_user` — each tool gets a unique client name for traceability
+- Added OpenMemory as Step 5.5 in startup.ps1 (between OpenClaw and AnythingLLM)
+- Added OpenMemory to final health check list in startup script
+**State Changes:**
+- `D:\DEV_PROJECTS\.mcp.json` — added openmemory MCP (claude-code)
+- `C:\Users\jerem\.codex\config.toml` — added openmemory MCP (codex-cli)
+- `C:\Users\jerem\.copilot\mcp-config.json` — added openmemory MCP (copilot-cli)
+- `C:\Users\jerem\.gemini\settings.json` — added openmemory MCP (gemini-cli)
+- `C:\Users\jerem\.config\opencode\opencode.json` — added openmemory MCP (opencode)
+- `C:\Users\jerem\AppData\Roaming\Claude\claude_desktop_config.json` — added openmemory MCP (claude-desktop)
+- `D:\DEV_PROJECTS\scripts\startup.ps1` — Step 5.5 added for OpenMemory auto-start + health check
+- 6 memories stored and verified in OpenMemory
+**Next Steps:**
+- Test from an actual CLI tool (boot Claude Code or Codex and verify OpenMemory tools appear)
+- unified-memory-bridge skill formal eval testing
+- BabyClaw 7-change config fix
+- MiniMax SuperPowers activation confirmed — all tools loaded in VTS
+---
