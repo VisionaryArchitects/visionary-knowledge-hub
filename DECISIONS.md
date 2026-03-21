@@ -41,3 +41,13 @@
 **Alternatives Considered:** N/A — these were already planned.
 **Impact:** VTS now has ~130+ additional productivity tools. Home Assistant remains pending.
 ---
+
+---
+## 2026-03-20 — Visionary Cockpit Will Ship as a WinUI Foundation Slice First
+**Tool:** Codex CLI
+**Context:** BALLER requested a flagship Windows app inspired by OpenClaw but expanded into a native Visionary Architects command shell with chat rail, adaptive canvas, and full-stack supervision.
+**Decision:** Build `Visionary Cockpit` as a WinUI-native flagship shell, but execute it in a foundation-first slice: shell, Home workspace, Operations supervision, and seeded Projects/Knowledge entry points before deeper OpenClaw parity and live AI transport.
+**Rationale:** This preserves the flagship architecture while keeping the first build tractable, testable, and aligned with the approved design/spec workflow.
+**Alternatives Considered:** Exact OpenClaw clone first (rejected — too limiting for the flagship goal), full-everything v1 from day one (rejected — too broad to execute safely in one slice).
+**Impact:** The approved implementation plan is `docs/superpowers/plans/2026-03-20-visionary-cockpit-foundation.md`. Execution is currently gated by WinUI environment readiness on the local machine.
+---

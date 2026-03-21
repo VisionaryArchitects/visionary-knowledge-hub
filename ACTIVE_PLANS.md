@@ -49,3 +49,21 @@
 **Blockers:** None (gateway is live, config file accessible)
 **Related Docs:** Obsidian `Prompts/BABYCLAW_CONFIG_FIX_HANDOFF.md`
 ---
+
+---
+## Visionary Cockpit Foundation — Status: BLOCKED
+**Created:** 2026-03-20 by Codex CLI
+**Last Updated:** 2026-03-20 by Codex CLI
+**Owner:** BALLER
+**Summary:** Build the first WinUI flagship foundation for Visionary Cockpit: native shell, left chat rail, adaptive right canvas, and operations supervision for VTS/OpenClaw/Ollama/ngrok.
+**Phases:**
+1. Non-mutating WinUI readiness audit — IN PROGRESS
+2. Scaffold unpackaged WinUI foundation + repo SDK/TFM pin — PENDING
+3. Ship shell/navigation foundation — PENDING
+4. Ship Home workspace with persistence — PENDING
+5. Ship Operations supervision foundation — PENDING
+6. Ship Projects + Knowledge entry points — PENDING
+7. Run flagship foundation verification pass — PENDING
+**Blockers:** Current machine does not have the `winui` template installed; host-level bootstrap/install path is not allowed without explicit approval override.
+**Related Docs:** `docs/superpowers/specs/2026-03-20-visionary-cockpit-design.md`, `docs/superpowers/plans/2026-03-20-visionary-cockpit-foundation.md`
+---

@@ -113,3 +113,23 @@
 - Activate MiniMax tools and SuperPowers (BALLER requested)
 - Test end-to-end cross-tool memory flow
 ---
+
+---
+## 2026-03-20 17:48 — Codex CLI
+**Summary:** Designed and locked the Visionary Cockpit foundation for the flagship Windows app, then wrote and approved the implementation plan after multiple review/fix loops. Execution is now staged to begin with a non-mutating WinUI readiness audit.
+**Decisions:**
+- Visionary Cockpit will use a WinUI-native flagship shell, not a literal OpenClaw port
+- The first implementation pass is a foundation slice: shell, Home workspace, Operations supervision, and seeded Projects/Knowledge entry points
+- Home interaction model is fixed as left chat rail + adaptive right canvas
+- Service supervision must use owned-process tracking, explicit receipts, and truth-pack startup order
+**State Changes:**
+- Added approved design spec at `docs/superpowers/specs/2026-03-20-visionary-cockpit-design.md`
+- Added approved implementation plan at `docs/superpowers/plans/2026-03-20-visionary-cockpit-foundation.md`
+- Updated `ACTIVE_PLANS.md` and `DECISIONS.md` with the new Visionary Cockpit records
+**Next Steps:**
+- Run the non-mutating WinUI readiness audit in `D:\DEV_PROJECTS\GitHub\Visionary_Architects_OS`
+- If readiness is blocked, capture the blocker exactly in repo docs and stop before host installs
+- If readiness is green, begin Task 1/Task 2 execution from the approved plan
+**Open Questions:**
+- None inside the plan itself; the remaining uncertainty is machine readiness for WinUI scaffolding
+---
