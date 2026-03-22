@@ -3,7 +3,7 @@ owner: Claude Code
 status: active
 priority: P0
 domain: connectors
-last_reviewed: 2026-03-16
+last_reviewed: 2026-03-20
 source_of_truth: true
 ---
 
@@ -34,6 +34,21 @@ source_of_truth: true
 | Gemini CLI | 15 |
 | OpenCode | 1 required (`visionary-tool-server`) |
 | Claude Desktop | 14 |
+
+## OpenMemory MCP Connections
+
+All 6 CLI tools are wired to OpenMemory via MCP SSE. Each tool uses a unique client name for traceability:
+
+| Client | OpenMemory MCP Endpoint | Config File |
+|--------|------------------------|-------------|
+| Claude Code CLI | `http://localhost:8765/mcp/claude-code/sse/default_user` | `D:\DEV_PROJECTS\.mcp.json` |
+| Codex CLI | `http://localhost:8765/mcp/codex-cli/sse/default_user` | `C:\Users\jerem\.codex\config.toml` |
+| Copilot CLI | `http://localhost:8765/mcp/copilot-cli/sse/default_user` | `C:\Users\jerem\.copilot\mcp-config.json` |
+| Gemini CLI | `http://localhost:8765/mcp/gemini-cli/sse/default_user` | `C:\Users\jerem\.gemini\settings.json` |
+| OpenCode | `http://localhost:8765/mcp/opencode/sse/default_user` | `C:\Users\jerem\.config\opencode\opencode.json` |
+| Claude Desktop | `http://localhost:8765/mcp/claude-desktop/sse/default_user` | `C:\Users\jerem\AppData\Roaming\Claude\claude_desktop_config.json` |
+
+OpenMemory exposes: `add_memories`, `search_memory`, `list_memories`, `delete_memories`. Any tool can write, any tool can read.
 
 ## Critical Rules
 

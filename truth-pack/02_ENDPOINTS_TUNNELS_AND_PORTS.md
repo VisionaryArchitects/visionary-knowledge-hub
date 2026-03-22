@@ -3,7 +3,7 @@ owner: Claude Code
 status: active
 priority: P0
 domain: endpoints
-last_reviewed: 2026-03-16
+last_reviewed: 2026-03-20
 source_of_truth: true
 ---
 
@@ -21,6 +21,9 @@ source_of_truth: true
 | Ollama Tags | `http://localhost:11434/api/tags` | Model availability check |
 | AIKit (optional) | `http://localhost:8000/v1` | Training-only vLLM (OpenAI-compatible) |
 | AnythingLLM | `http://localhost:3001` | Legacy local app |
+| OpenMemory API | `http://localhost:8765` | Shared AI memory brain |
+| OpenMemory MCP | `http://localhost:8765/mcp/{client}/sse/default_user` | Per-tool MCP SSE connector |
+| Qdrant | `http://localhost:6333` | Vector store for OpenMemory (Docker) |
 
 ## ngrok Tunnels (Hobby Tier)
 
@@ -42,6 +45,8 @@ source_of_truth: true
 | 4040 | ngrok inspector | Yes |
 | 3001 | AnythingLLM | Optional |
 | 8000 | AIKit/vLLM | Optional (training-only) |
+| 8765 | OpenMemory | Yes (shared AI memory) |
+| 6333 | Qdrant | Yes (OpenMemory vector store, Docker) |
 
 ## Primary Remote Connector
 

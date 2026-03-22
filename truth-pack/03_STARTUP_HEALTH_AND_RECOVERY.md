@@ -3,7 +3,7 @@ owner: Claude Code
 status: active
 priority: P0
 domain: ops
-last_reviewed: 2026-03-16
+last_reviewed: 2026-03-20
 source_of_truth: true
 ---
 
@@ -15,8 +15,10 @@ source_of_truth: true
 2. Start **VTS** (`python main.py` in `GitHub/Claude_Opus_ChatGPT_App_Project/`)
 3. Start **ngrok** tunnels (VTS + OpenClaw)
 4. Start **OpenClaw** gateway (`openclaw gateway start`)
-5. Optionally start AnythingLLM
-6. Start AIKit only for training workflows
+5. Start **Qdrant** Docker container (vector store for OpenMemory)
+5.5. Start **OpenMemory** (`python -m mem0.server` or startup.ps1 auto-start)
+6. Optionally start AnythingLLM
+7. Start AIKit only for training workflows
 
 Startup scripts: `D:\DEV_PROJECTS\scripts\startup.ps1`, `Start-VisionaryStack.ps1`
 
@@ -36,6 +38,13 @@ curl https://visionary-tool-server.ngrok.app/health  # VTS tunnel
 # OpenClaw specific
 openclaw status                            # Gateway + agents
 openclaw skills list                       # Installed skills
+```
+
+## OpenMemory Health Checks
+
+```powershell
+curl http://localhost:8765/api/v1/memories/?user_id=default_user  # OpenMemory API
+curl http://localhost:6333/collections                              # Qdrant collections
 ```
 
 ## Optional Health Checks

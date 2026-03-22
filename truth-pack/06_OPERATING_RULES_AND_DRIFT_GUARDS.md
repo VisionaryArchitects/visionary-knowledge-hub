@@ -3,7 +3,7 @@ owner: Claude Code
 status: active
 priority: P0
 domain: rules
-last_reviewed: 2026-03-16
+last_reviewed: 2026-03-20
 source_of_truth: true
 ---
 
@@ -41,6 +41,9 @@ source_of_truth: true
 | `visionary-aikit.ngrok.app` | Points to **AnythingLLM** | Not AIKit |
 | Primary local LLM | **Ollama** v0.15.6 | Not AIKit/vLLM |
 | VTS entry point | `GitHub/Claude_Opus_ChatGPT_App_Project/main.py` | NOT `razer-aikit-v2` |
+| Node.js manager | **System-installed** (v25.6.1) | Volta was removed Mar 18, 2026 |
+| MiniMax sidecar | **MiniMax-M2.7** | Old docs may say M2.5 |
+| OpenMemory | Port **8765**, `default_user` | Uses Qdrant at port 6333 (Docker) |
 
 ## Communication Style
 

@@ -3,7 +3,7 @@ owner: Claude Code
 status: active
 priority: P0
 domain: runtime
-last_reviewed: 2026-03-16
+last_reviewed: 2026-03-20
 source_of_truth: true
 ---
 
@@ -29,7 +29,7 @@ The Visionary Architects production stack:
 | RAM | 96 GB |
 | OS | Windows 11 Home |
 | Python | 3.14.2 |
-| Node | Volta-managed (v25.6.1) |
+| Node | v25.6.1 (system-installed; Volta removed Mar 18, 2026) |
 | Storage | D: drive for all dev projects and models |
 
 ## VTS (Visionary Tool Server) v5.0.0
@@ -100,3 +100,14 @@ The stack is healthy when:
 - VTS remote tunnel responds at `https://visionary-tool-server.ngrok.app/health`
 
 AIKit being offline is NOT a failure.
+
+## OpenMemory (Shared AI Brain)
+
+- **Status**: Deployed natively (not Docker), auto-starts via startup.ps1 Step 5.5
+- **API**: `http://localhost:8765`
+- **Vector store**: Qdrant in Docker at `http://localhost:6333` (collection: `visionary_memory`, 1024 dims)
+- **Embedding model**: `qwen3-embedding:0.6b` via Ollama (1024-dim vectors)
+- **User ID**: `default_user`
+- **MCP endpoint pattern**: `http://localhost:8765/mcp/{client-name}/sse/default_user`
+- **Write mode**: Always use `infer: false` — AI tools write clean formatted text directly
+- **Wired into**: All 6 CLI tools (Claude Code, Codex, Copilot, Gemini, OpenCode, Claude Desktop)
